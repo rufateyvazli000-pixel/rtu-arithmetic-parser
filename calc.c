@@ -96,7 +96,7 @@ static Token next_token(const char *input, size_t *index) {
         // A decimal point must be followed by a digit.
         if (!isdigit((unsigned char)input[*index])) {
             token.type = TOK_INVALID;
-            token.position = *index + 1;
+            token.position = *index;
             return token;
         }
 
